@@ -1,0 +1,15 @@
+
+<mat-progress-bar mode="indeterminate" *ngIf="posts.length == 0"></mat-progress-bar>
+<div class="blog-card" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <mat-card *ngFor="let post of posts" routerLink="/post/{{post.slug}}" matRipple fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutAlign="space-between">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" >{{post.title}}</mat-card-title>
+            <mat-card-subtitle>{{post.updatedAt | date}}</mat-card-subtitle>
+        </mat-card-header>
+        <button mat-icon-button aria-label="Arrow right">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+    </mat-card>
+</div>
+

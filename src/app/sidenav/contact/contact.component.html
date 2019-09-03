@@ -1,0 +1,62 @@
+<div class="contact-card">
+  <mat-card>
+    <mat-vertical-stepper linear #stepper>
+      <mat-step [stepControl]="nameFormGroup" errorMessage="Name is required.">
+        <form [formGroup]="nameFormGroup">
+          <ng-template matStepLabel>Name</ng-template>
+          <mat-form-field>
+            <input id="input0" matInput placeholder="John Smith" formControlName="nameCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="emailFormGroup" errorMessage="Email is required.">
+        <form [formGroup]="emailFormGroup">
+          <ng-template matStepLabel>Email</ng-template>
+          <mat-form-field>
+            <input id="input1" matInput  formControlName="emailCtrl" required>
+            <mat-hint>someone@gmail.com</mat-hint>
+            <mat-error *ngIf="emailFormGroup.hasError('email') && !emailFormGroup.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="subjectFormGroup" errorMessage="Subject is required.">
+          <form [formGroup]="subjectFormGroup">
+            <ng-template matStepLabel>Subject</ng-template>
+            <mat-form-field>
+              <input id="input2" matInput placeholder="Enquiry" formControlName="subjectCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+      </mat-step>
+      <mat-step [stepControl]="messageFormGroup" errorMessage="Message is required.">
+          <form [formGroup]="messageFormGroup">
+            <ng-template matStepLabel>Message</ng-template>
+            <mat-form-field>
+              <textarea id="input3" matInput placeholder="Message" formControlName="messageCtrl" required></textarea>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Send</ng-template>
+        <div>
+          <button mat-button (click)="submitContactForm()">Send</button>
+          <mat-spinner></mat-spinner>
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+  </mat-card>
+</div>
+

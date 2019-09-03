@@ -1,0 +1,38 @@
+.example-header-image {
+  background-image: url('../../../assets/images/kekeme.jpg');
+  background-size: cover;
+}
+
+.home-image{
+  width: 100%;
+  z-index: -10;
+}
+
+// .container{
+//   position: relative;
+//   text-align: center;
+// }
+
+.container-home{
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.keke-me{
+  border-radius: 50%;
+  width: 50%;
+  box-shadow: 0 0 25px 25px rgb(83, 146, 215);
+}
+
+.heading-text{
+  //font-family: 'Caveat', cursive;
+  //font-family: 'Permanent Marker', cursive;
+  font-family: 'Cantarell', sans-serif;
+}

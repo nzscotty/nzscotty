@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "./assets/styles/main.scss";
+
+.img {
+  width: 100%;
+  margin-bottom: 18%;
+}
+// .container {
+//   min-height: 100%;
+//   width: 100%;
+// }
+.card-picture {
+  width: 23%;
+  margin-bottom: 2%;
+}
+
+.search-form {
+  width: 90%;
+}

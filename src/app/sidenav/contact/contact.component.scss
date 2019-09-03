@@ -1,0 +1,25 @@
+
+// .contact-card {
+//   @media (max-width: 600px) {
+//     max-width: 400px;
+// }
+// }
+
+mat-card{
+  margin: 2%;
+  // margin-top: 2%;
+  // margin-bottom: 2%;
+  @media (min-width: 768px) {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+textarea{
+  min-height: 100px;
+}
+
+.mat-button{
+  background-color: rgba($color: #3f51b5, $alpha: 0.1) !important
+}
